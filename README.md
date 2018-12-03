@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+railsでフルスタック開発したブログ。デザインはbootstrapに丸投げした。
 
-Things you may want to cover:
+***改訂4版 基礎 Ruby on Rails (IMPRESS KISO SERIES)***
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+の会員制ブログサイト製作チュートリアルを模写して自分なりにカスタマイズした。
