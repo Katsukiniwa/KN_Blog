@@ -1,0 +1,10 @@
+<% @page_title = "会員の新規登録" %>
+
+<h1><%= @page_title %></h1>
+
+<%= form_for @user do |form| %>
+  <%= render "shared/user_form", form: form %>
+  <div class="registration-button">
+    <%= button_to "登録", {controller: 'users'}, {class: "btn btn-info btn-lg"} %>
+  </div>
+<% end %>

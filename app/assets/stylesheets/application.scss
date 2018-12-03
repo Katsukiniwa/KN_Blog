@@ -1,0 +1,174 @@
+/*
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap";
+
+/* ページ全体 */
+html {
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 12px;
+  @media screen and (max-device-width: 424px) {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  background-color: white;
+  color: black;
+  margin: 0; padding: 0;
+  font-family: Meiryo, sans-serif;
+  font-size: 1.2rem;
+  }
+
+.login-form {
+  padding: 2rem;
+  text-align: center;
+}
+
+.account-menu {
+  text-align: center;
+}
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  padding: 1em;
+  flex: 1 0 300px;
+  padding: 1em;
+  margin: auto;
+}
+
+.card {
+  width: calc((100% - 80px) / 3);
+  height: 400px;
+  margin: 1rem;
+  padding: 1rem;
+  overflow: hidden;
+  @media screen and (max-device-width: 424px) {
+    width: 100%;
+    height: 800px;
+    }
+  .card-title {
+    border-bottom: 1px solid #666666;
+  }
+  .card-content {
+    height: 70%;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+    .p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+    }
+    @media screen and (max-device-width: 424px) {
+      height: 80%;
+    }
+  }
+  .post-date {
+    position: absolute;
+    color: #666666;
+    margin-bottom: 12px;
+    top: 92%; 
+    left:10px;
+    @media screen and (max-device-width: 424px) {
+      display: none;
+    }
+  }
+  .syousai-button {
+    position: absolute;
+    top: 82%; 
+    margin-bottom: 4px;
+    @media screen and (max-device-width: 424px) {
+      top: 92%;
+      left: 1rem;
+    }
+  }
+}
+
+.card-text {
+  padding-top: 0px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.card-footer {
+  text-align: center;
+  background-color: white;
+}
+
+.about-information {
+  margin: 2rem;
+  text-align: center;
+}
+
+/* リンク */
+a:link { color: #00c; }
+a:visited { color: #00c; }
+a:hover { color: #f00; }
+a img { border: none; }
+
+/* ナビゲーション */
+nav ul,
+ul.toolbar,
+ul.links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li,
+div.toolbar li,
+ul.toolbar li,
+ul.links li {
+  display: inline;
+}
+
+.log_out_button {
+  margin-bottom: 10px;
+}
+
+/* ヘッダー */
+header {
+  text-align:center;
+  border-top: 4px solid #6bb;
+  padding-top: 4px;
+}
+
+ul.account-menu {
+  text-align: right;
+}
+
+.modoru_button {
+  margin-top: 5px;
+}
+
+/* メインコンテンツ */
+main h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5rem;
+  padding: 1rem;
+  border-bottom: 2px solid #666666;
+}
+
+main p {
+  line-height: 2rem;
+}
+
+ul.toolbar,
+div.toolbar {
+  padding: 15px 0;
+  font-size: 90%;
+  text-align: right;
+}
+
+ul.toolbar li:not(:last-child):after {
+  color: #888;
+  content: " | ";
+  margin: 0 2px;
+}

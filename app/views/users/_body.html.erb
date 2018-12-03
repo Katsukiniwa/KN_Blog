@@ -1,0 +1,30 @@
+<% @page_title = "会員の詳細" %>
+
+<h1><%= @page_title %></h1>
+
+<table class="attr">
+  <tr>
+    <th>ユーザー名</th>
+    <td><%= @user.name %></td>
+  </tr>
+  <tr>
+    <th>名前</th>
+    <td><%= @user.full_name %></td>
+  </tr>
+  <tr>
+    <th>性別</th>
+    <td><%= @user.sex == 1 ? "男" : "女" %></td>
+  </tr>
+  <tr>
+    <th>誕生日</th>
+    <td><%= @user.birthday&.strftime("%Y年%m月%d日") %></td>
+  </tr>
+  <tr>
+    <th>メールアドレス</th>
+    <td><%= @user.email %></td>
+  </tr>
+  <tr>
+    <th>管理者</th>
+    <td><%= @user.administrator? ? "○" : "－" %></td>
+  </tr>
+</table>

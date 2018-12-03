@@ -1,0 +1,37 @@
+<% @page_title = "会員名簿" %>
+<h1><%= @page_title %></h1>
+
+<div class="user-table">
+  <% if @users.present? %>
+    <table class="list">
+      <thead>
+        <tr>
+          <th>会員番号</th>
+          <th>ユーザー名</th>
+          <th>氏名</th>
+          <% if current_user.administrator? %>
+            <th>操作</th>
+          <% end %>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td style="text-align: center"><%= user.id %></td>
+            <td><%= link_to user.name, user %></td>
+            <td><%= user.full_name %></td>
+            <% if current_user.administrator? %>
+              <td>
+                <%= link_to "編集", [:edit, user] %> |
+                <%= link_to "削除", user, method: :delete,
+                  data: { confirm: "本当に削除しますか?" } %>
+              </td>
+            <% end %>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+  <p>会員情報がありません。</p>
+  <% end %>
+</div>

@@ -1,0 +1,35 @@
+/* 表：一覧表示、詳細表示 */
+table.list, table.attr {
+  width: 60%;
+  font-size: 1.2rem;
+  margin: auto;
+  text-align: left;
+  @media screen and (max-device-width: 424px) {
+    width: 90%;
+    text-align: center;
+  }
+}
+
+/*登録ボタン*/
+.registration-button {
+  text-align: center;
+  margin: 1rem;
+}
+
+table.list th, table.attr th {
+  font-weight: normal;
+}
+
+table.list td, table.list th,
+table.attr td, table.attr th {
+  background-color: seashell;
+  padding: 1rem;
+}
+
+table.list th {
+  text-align: left;
+}
+
+table.attr th {
+  text-align: left;
+}
