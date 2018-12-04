@@ -2,9 +2,10 @@
 
 <h1><%= @page_title %></h1>
 
-<div><%= link_to "会員の詳細ページに戻る", @user %></div>
-
 <%= form_for @user do |form| %>
   <%= render "shared/user_form", form: form %>
-  <%= button_to "更新", {controller: 'users'}, {class: "btn btn-info"} %>
+  <div class="two-button">
+    <%= button_to "更新", {controller: 'users'}, {class: "btn btn-info btn-lg"} %>
+    <%= button_to "戻る", {controller: 'users'}, {method: :get, class: "btn btn-info btn-lg"} %>
+  </div>
 <% end %>

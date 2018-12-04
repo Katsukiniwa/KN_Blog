@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
-  before_action :login_required
-  
+  before_action :login_required, except: [:new, :create]
+  protect_from_forgery except: [:update, :create]
+
   # 会員一覧
   def index
     @users = User.order("id")
@@ -31,7 +32,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @user, notice: "会員を登録しました。"
+      redirect_to @user, notice: "会員情報を登録しました。"
     else
       render "new"
     end

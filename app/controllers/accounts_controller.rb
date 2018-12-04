@@ -1,5 +1,6 @@
 class AccountsController < ApplicationController
-  before_action :login_required
+  #before_action :login_required
+  protect_from_forgery except: :update
 
   def show
     @user = current_user
