@@ -4,6 +4,10 @@
 
 <%= form_for @user, as: "account", url: :account do |form| %>
   <%= render "shared/user_form", form: form %>
-  <div><%= form.submit "会員情報を更新する" %></div>
-  <div class="modoru_button"><%= button_to "マイアカウントに戻る", :account %></div>
+  <div>
+    <%= form.submit "会員情報を更新する" %>
+  </div>
+  <div class="modoru_button">
+    <%= button_to "マイアカウントに戻る", :account %>
+  </div>
 <% end %>

@@ -1,6 +1,5 @@
 class UsersController < ApplicationController
-  before_action :login_required, except: [:new, :create]
-  protect_from_forgery except: [:update, :create]
+  before_action :login_required, except: [:create, :new, :show]
 
   # 会員一覧
   def index
@@ -31,7 +30,7 @@ class UsersController < ApplicationController
   # 会員の新規登録
   def create
     @user = User.new(params[:user])
-    if @user.save
+    if @user.save!
       redirect_to @user, notice: "会員情報を登録しました。"
     else
       render "new"

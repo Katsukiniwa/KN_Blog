@@ -28,5 +28,11 @@
       <th><%= form.label :email, "メールアドレス" %></th>
       <td><%= form.email_field :email %></td>
     </tr>
+    <% if @user.new_record? %>
+      <tr>
+        <th><%= form.label :password, "パスワード" %></th>
+        <td><%= form.text_field :password %></td>
+      </tr>
+    <% end %>
   </table>
 </div>

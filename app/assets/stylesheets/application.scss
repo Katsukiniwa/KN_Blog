@@ -73,7 +73,7 @@ body {
     position: absolute;
     color: #666666;
     margin-bottom: 12px;
-    top: 92%; 
+    top: 92%;
     left:10px;
     @media screen and (max-device-width: 424px) {
       display: none;
@@ -81,7 +81,7 @@ body {
   }
   .syousai-button {
     position: absolute;
-    top: 82%; 
+    top: 82%;
     margin-bottom: 4px;
     @media screen and (max-device-width: 424px) {
       top: 92%;
@@ -103,6 +103,10 @@ body {
 
 .about-information {
   margin: 2rem;
+  text-align: center;
+}
+
+.account-menu {
   text-align: center;
 }
 
@@ -140,7 +144,7 @@ header {
 }
 
 ul.account-menu {
-  text-align: right;
+  text-align: center;
 }
 
 .modoru_button {
@@ -162,9 +166,10 @@ main p {
 
 ul.toolbar,
 div.toolbar {
+  display: inline-block;
   padding: 15px 0;
   font-size: 90%;
-  text-align: right;
+  text-align: center;
 }
 
 ul.toolbar li:not(:last-child):after {

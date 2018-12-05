@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "users" => "top#users"
   resource :session, only: [:create, :destroy]
   resource :account, only: [:show, :edit, :update]
+  resource :password, only: [:show, :edit, :update]
 
   resources :articles
   namespace :admin do

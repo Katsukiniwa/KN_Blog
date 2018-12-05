@@ -4,8 +4,7 @@
 
 <%= form_for @user do |form| %>
   <%= render "shared/user_form", form: form %>
-  <div class="two-button">
+  <div class="update-button">
     <%= button_to "更新", {controller: 'users'}, {class: "btn btn-info btn-lg"} %>
-    <%= button_to "戻る", {controller: 'users'}, {method: :get, class: "btn btn-info btn-lg"} %>
   </div>
 <% end %>
