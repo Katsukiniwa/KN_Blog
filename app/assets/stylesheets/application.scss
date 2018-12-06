@@ -66,7 +66,7 @@ body {
       -webkit-line-clamp: 3;
     }
     @media screen and (max-device-width: 424px) {
-      height: 80%;
+      height: 70%;
     }
   }
   .post-date {
@@ -84,7 +84,7 @@ body {
     top: 82%;
     margin-bottom: 4px;
     @media screen and (max-device-width: 424px) {
-      top: 92%;
+      top: 88%;
       left: 1rem;
     }
   }
@@ -139,7 +139,6 @@ ul.links li {
 /* ヘッダー */
 header {
   text-align:center;
-  border-top: 4px solid #6bb;
   padding-top: 4px;
 }
 
