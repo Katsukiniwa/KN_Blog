@@ -1,5 +1,5 @@
 <% unless current_user %>
-    <div class="login-form">
+    <ul class="login-form">
         <% if flash.alert %><p class="alert"><%= flash.alert %></p><% end %>
         <%= form_tag :session, id: "login-form" do %>
             <div>
@@ -10,9 +10,9 @@
                 <label>パスワード：</label>
                 <input type="password" name="password">
             </div>
-            <div>
-                <%= button_to "ログイン", {method: :post, class: "btn btn-info"} %>
-            </div>
+            <ul class="account-menu">
+                <%= button_to "ログイン", {controller: :sessions, action: 'create'}, {method: :post, class: "btn btn-info btn-lg"} %>
+            </ul>
         </div>
     <% end %>
 <% end %>
@@ -31,7 +31,6 @@
   </div>
 
   <ul class="account-menu">
-    <%= link_to current_user.name + "さん", :account %>
-    <%= link_to "ログアウト", :session, method: :delete, data: { confirm: "ログアウトしますか？" } %>
+    <%= button_to "ログアウト", {controller: :sessions, action: 'destroy'}, {method: :delete, class: "btn btn-info btn-lg"} %>
   </ul>
 <% end %>
