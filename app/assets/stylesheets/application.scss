@@ -85,7 +85,12 @@ body {
     margin-bottom: 4px;
     @media screen and (max-device-width: 424px) {
       top: 88%;
-      left: 45%;
+      left: 42%;
+    }
+  }
+  .btn {
+    @media screen and (max-device-width: 424px) {
+      width: 200%;
     }
   }
 }
@@ -132,17 +137,35 @@ ul.links li {
   display: inline;
 }
 
+.btn {
+    padding: 8px 8px;
+    border: 0 none;
+    font-weight: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
 .log_out_button {
   margin-bottom: 10px;
 }
 
-.account-button {
-  display: inline-block;
-  margin-bottom: 1rem;
+.hoge1 {
+  margin-bottom: 20px;
 }
 
-.account-button2 {
-  display: inline-block;
+.edit_password {
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.edit_password_form {
+  display: flex;
+}
+
+ul.account-button li{
+  display: flex;
+  padding: 10px;
 }
 
 /* ヘッダー */
@@ -174,7 +197,7 @@ main p {
 
 ul.toolbar,
 div.toolbar {
-  padding: 15px 0;
+  padding: 20px;
   font-size: 90%;
   text-align: center;
 }

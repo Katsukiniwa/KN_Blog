@@ -19,10 +19,12 @@
     </tr>
   </table>
 
-  <div>
-    <%= form.submit "変更" %>
-  </div>
-  <div class="toolbar">
-    <%= link_to "マイアカウントに戻る", :account %>
-  </div>
+  <ul class="toolbar">
+    <div class="edit_password">
+      <%= button_to "変更する", {controller: 'passwords', action: 'update'}, {class: "btn btn-info btn-lg"} %>
+    </div>
+    <div class="edit_password">
+      <%= button_to "アカウントに戻る", :account, {method: "get", class: "btn btn-info btn-lg"} %>
+    </div>
+  </ul>
 <% end %>

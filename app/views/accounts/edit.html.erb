@@ -4,10 +4,12 @@
 
 <%= form_for @user, as: "account", url: :account do |form| %>
   <%= render "shared/user_form", form: form %>
-    <div class="account-button">
-       <%= button_to "会員情報を更新する", {controller: 'accounts', action: 'update'}, {class: "btn btn-info btn-lg"} %>
-     </div>
-     <div class="account-button2">
-       <%= button_to "マイアカウントに戻る", :account, {method: "get", class: "btn btn-info btn-lg"}%>
-     </div>
+<ul class="toolbar">
+  <div class="hoge1">
+    <%= button_to "会員情報を更新する", {controller: 'accounts', action: 'update'}, {class: "btn btn-info btn-lg"} %>
+  </div>
+  <div class="hoge2">
+    <%= button_to "マイアカウントに戻る", :account, {method: "get", class: "btn btn-info btn-lg"}%>
+  </div>
+</ul>
 <% end %>
