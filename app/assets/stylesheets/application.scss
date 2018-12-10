@@ -85,7 +85,7 @@ body {
     margin-bottom: 4px;
     @media screen and (max-device-width: 424px) {
       top: 88%;
-      left: 1rem;
+      left: 45%;
     }
   }
 }
@@ -136,10 +136,18 @@ ul.links li {
   margin-bottom: 10px;
 }
 
+.account-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.account-button2 {
+  display: inline-block;
+}
+
 /* ヘッダー */
 header {
   text-align:center;
-  padding-top: 4px;
 }
 
 ul.account-menu {
@@ -166,7 +174,6 @@ main p {
 
 ul.toolbar,
 div.toolbar {
-  display: inline-block;
   padding: 15px 0;
   font-size: 90%;
   text-align: center;

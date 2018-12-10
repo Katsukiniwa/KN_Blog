@@ -1,3 +1,14 @@
+<% @page_title = "このブログについて" %>
+
+<h1><%= @page_title %></h1>
+
+<div class="about-information">
+    <p>このブログはRuby on rails学習の一環で立ち上げたものです</p>
+
+    <p>実装した機能は会員登録、ログイン・ログアウト機能、会員一覧の閲覧、記事の投稿・編集・削除</p>
+
+    <p>これから追加で画像の投稿、いいねボタン、記事詳細ページでのフォーラムフィールドの実装していく予定です。</p>
+</div>
 <% unless current_user %>
     <ul class="login-form">
         <% if flash.alert %><p class="alert"><%= flash.alert %></p><% end %>
@@ -13,23 +24,10 @@
             <ul class="account-menu">
                 <%= button_to "ログイン", {controller: :sessions, action: 'create'}, {method: :post, class: "btn btn-info btn-lg"} %>
             </ul>
-        </div>
-    <% end %>
+      <% end %>
 <% end %>
 
 <% if current_user %>
-  <% @page_title = "このブログについて" %>
-
-  <h1><%= @page_title %></h1>
-
-  <div class="about-information">
-      <p>このブログはRuby on rails学習の一環で立ち上げたものです</p>
-
-      <p>実装した機能は会員登録、ログイン・ログアウト機能、会員一覧の閲覧、記事の投稿・編集・削除</p>
-
-      <p>これから追加で画像の投稿、いいねボタン、記事詳細ページでのフォーラムフィールドの実装していく予定です。</p>
-  </div>
-
   <ul class="account-menu">
     <%= button_to "ログアウト", {controller: :sessions, action: 'destroy'}, {method: :delete, class: "btn btn-info btn-lg"} %>
   </ul>

@@ -11,18 +11,23 @@
       <li class="nav-item">
         <a class="nav-link" href="/articles">記事一覧</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/users/new">会員登録</a>
-      </li>
       <% if current_user %>
-      <li class="nav-item">
-        <a class="nav-link" href="/users">読者一覧</a>
-      </li>
-      <% if current_user.administrator? %>
-      <li class="nav-item">
-        <a class="nav-link" href="/admin">管理ページ</a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/account">プロフィール</a>
+        </li>
       <% end %>
+      <% unless current_user %>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/new">会員登録</a>
+        </li>
+      <% end %>
+      <% if current_user&.administrator? %>
+        <li class="nav-item">
+          <a class="nav-link" href="/users">読者一覧</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin">管理ページ</a>
+        </li>
       <% end %>
     </ul>
   </div>
